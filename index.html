@@ -304,20 +304,34 @@
 
         .hero-card {
             width: 100%;
-            max-width: 420px;
+            max-width: 500px;
             background: var(--glass);
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
             border: 1px solid var(--glass-border);
-            padding: 25px;
+            padding: 20px;
             border-radius: 35px;
             box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
         }
 
-        .hero-card img {
+        /* Video wrapper untuk YouTube embed */
+        .video-wrapper {
+            position: relative;
             width: 100%;
-            border-radius: 24px;
-            display: block;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 20px;
         }
 
         /* ========== SECTIONS ========== */
@@ -566,6 +580,16 @@
 
             .hero-card {
                 max-width: 100%;
+                padding: 15px;
+                border-radius: 28px;
+            }
+
+            .video-wrapper {
+                border-radius: 16px;
+            }
+
+            .video-wrapper iframe {
+                border-radius: 16px;
             }
 
             .section-title h3 {
@@ -712,169 +736,187 @@
             <div class="hero-grid">
                 <div class="hero-text">
                     <h2>Madrasah Digital<br>Modern & Futuristik</h2>
-                    <p>Website resmi MAN 2 Grobogan dengan tampilan modern, teknologi digital, dan sistem informasi madrasah profesional.</p>
+                    <p>Website resmi MAN 2 Grobogan dengan tampilan modern, teknologi digital, dan sistem informasi
+                        madrasah profesional.</p>
                     <a href="#" class="hero-btn">
                         <i class="fa-solid fa-paper-plane"></i> PPDB Online
                     </a>
                 </div>
                 <div class="hero-image">
+                    <!-- Badge "Prestasi Nasional" telah dihapus -->
                     <div class="hero-card">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop" alt="Siswa MAN 2 Grobogan">
+                        <!-- Video YouTube menggantikan foto -->
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/PGJiRtDlpRA?rel=0"
+                            title="Video MAN 2 Grobogan"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ==================== BERITA ==================== -->
-    <section class="section">
-        <div class="container">
-            <div class="section-title">
-                <h3>📰 Berita Terbaru</h3>
-                <p>Informasi kegiatan terbaru MAN 2 Grobogan</p>
+<!-- ==================== BERITA ==================== -->
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <h3>📰 Berita Terbaru</h3>
+            <p>Informasi kegiatan terbaru MAN 2 Grobogan</p>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop"
+                alt="Seminar Teknologi">
+                <div class="card-content">
+                    <h4>Seminar Teknologi</h4>
+                    <p>Peningkatan kualitas pembelajaran berbasis digital dan AI.</p>
+                </div>
             </div>
-            <div class="grid">
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop" alt="Seminar Teknologi">
-                    <div class="card-content">
-                        <h4>Seminar Teknologi</h4>
-                        <p>Peningkatan kualitas pembelajaran berbasis digital dan AI.</p>
-                    </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=1200&auto=format&fit=crop"
+                alt="Prestasi Siswa">
+                <div class="card-content">
+                    <h4>Prestasi Siswa</h4>
+                    <p>Siswa MAN 2 Grobogan meraih penghargaan tingkat nasional.</p>
                 </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=1200&auto=format&fit=crop" alt="Prestasi Siswa">
-                    <div class="card-content">
-                        <h4>Prestasi Siswa</h4>
-                        <p>Siswa MAN 2 Grobogan meraih penghargaan tingkat nasional.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" alt="Kegiatan Madrasah">
-                    <div class="card-content">
-                        <h4>Kegiatan Madrasah</h4>
-                        <p>Kegiatan islami, akademik, dan pengembangan karakter siswa.</p>
-                    </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
+                alt="Kegiatan Madrasah">
+                <div class="card-content">
+                    <h4>Kegiatan Madrasah</h4>
+                    <p>Kegiatan islami, akademik, dan pengembangan karakter siswa.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ==================== FOOTER ==================== -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <!-- Peta Lokasi -->
-                <div class="footer-box">
-                    <h4>📍 Peta Lokasi</h4>
-                    <iframe src="https://maps.google.com/maps?q=MAN%202%20Grobogan&t=&z=15&ie=UTF8&iwloc=&output=embed" title="Peta MAN 2 Grobogan" loading="lazy" allowfullscreen></iframe>
-                </div>
-
-                <!-- Kontak & Media Sosial -->
-                <div class="footer-box">
-                    <h4>📬 Kontak Resmi</h4>
-                    <div class="contact-item">
-                        <i class="fa-solid fa-envelope"></i>
-                        <a href="mailto:mangubug@gmail.com">mangubug@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fa-brands fa-instagram"></i>
-                        <a href="https://www.instagram.com/man2grobogan?igsh=enp0bG5xM3Z4a25h" target="_blank" rel="noopener noreferrer">Instagram MAN 2 Grobogan</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fa-brands fa-youtube"></i>
-                        <a href="https://www.youtube.com/@man2grobogan" target="_blank" rel="noopener noreferrer">YouTube MAN 2 Grobogan</a>
-                    </div>
-
-                    <div class="social">
-                        <a href="mailto:mangubug@gmail.com" aria-label="Email resmi"><i class="fa-solid fa-envelope"></i></a>
-                        <a href="https://www.instagram.com/man2grobogan?igsh=enp0bG5xM3Z4a25h" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/@man2grobogan" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                    </div>
-                </div>
+<!-- ==================== FOOTER ==================== -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Peta Lokasi -->
+            <div class="footer-box">
+                <h4>📍 Peta Lokasi</h4>
+                <iframe src="https://maps.google.com/maps?q=MAN%202%20Grobogan&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                title="Peta MAN 2 Grobogan" loading="lazy" allowfullscreen></iframe>
             </div>
 
-            <div class="copyright">
-                © 2026 MAN 2 GROBOGAN — Modern Tech School Website
+            <!-- Kontak & Media Sosial -->
+            <div class="footer-box">
+                <h4>📬 Kontak Resmi</h4>
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:mangubug@gmail.com">mangubug@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-brands fa-instagram"></i>
+                    <a href="https://www.instagram.com/man2grobogan?igsh=enp0bG5xM3Z4a25h" target="_blank"
+                    rel="noopener noreferrer">Instagram MAN 2 Grobogan</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-brands fa-youtube"></i>
+                    <a href="https://www.youtube.com/@man2grobogan" target="_blank"
+                    rel="noopener noreferrer">YouTube MAN 2 Grobogan</a>
+                </div>
+
+                <div class="social">
+                    <a href="mailto:mangubug@gmail.com" aria-label="Email resmi"><i
+                    class="fa-solid fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/man2grobogan?igsh=enp0bG5xM3Z4a25h" target="_blank"
+                    rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@man2grobogan" target="_blank" rel="noopener noreferrer"
+                    aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
             </div>
         </div>
-    </footer>
 
-    <!-- ==================== JAVASCRIPT ==================== -->
-    <script>
-        (function() {
-            const hamburger = document.getElementById('hamburger');
-            const menu = document.getElementById('menu');
-            const body = document.body;
+        <div class="copyright">
+            © 2026 MAN 2 GROBOGAN — Modern Tech School Website
+        </div>
+    </div>
+</footer>
 
-            // Toggle mobile menu
-            hamburger.addEventListener('click', function() {
-                menu.classList.toggle('active');
-                if (menu.classList.contains('active')) {
-                    body.style.overflow = 'hidden';
-                } else {
-                    body.style.overflow = '';
-                    // Tutup semua submenu mobile saat menu utama ditutup
-                    const activeItems = menu.querySelectorAll('.menu-item-has-children.active');
-                    activeItems.forEach(item => item.classList.remove('active'));
-                }
-            });
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+    (function() {
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+        const body = document.body;
 
-            // Mobile dropdown accordion
-            const dropdownParents = document.querySelectorAll('.menu-item-has-children');
+        // Toggle mobile menu
+        hamburger.addEventListener('click', function() {
+            menu.classList.toggle('active');
+            if (menu.classList.contains('active')) {
+                body.style.overflow = 'hidden';
+            } else {
+                body.style.overflow = '';
+                // Tutup semua submenu mobile saat menu utama ditutup
+                const activeItems = menu.querySelectorAll('.menu-item-has-children.active');
+                activeItems.forEach(item => item.classList.remove('active'));
+            }
+        });
 
-            dropdownParents.forEach(function(parent) {
-                const link = parent.querySelector(':scope > a');
-                if (!link) return;
+        // Mobile dropdown accordion
+        const dropdownParents = document.querySelectorAll('.menu-item-has-children');
 
-                link.addEventListener('click', function(e) {
-                    // Hanya berlaku di tampilan mobile
-                    if (window.innerWidth <= 992) {
-                        e.preventDefault();
+        dropdownParents.forEach(function(parent) {
+            const link = parent.querySelector(':scope > a');
+            if (!link) return;
 
-                        // Tutup dropdown lain yang terbuka
-                        dropdownParents.forEach(function(other) {
-                            if (other !== parent && other.classList.contains('active')) {
-                                other.classList.remove('active');
-                            }
-                        });
-
-                        // Toggle dropdown ini
-                        parent.classList.toggle('active');
-                    }
-                    // Di desktop, biarkan hover yang bekerja (tidak ada tindakan khusus)
-                });
-            });
-
-            // Tutup menu mobile saat klik di luar (opsional)
-            document.addEventListener('click', function(e) {
+            link.addEventListener('click', function(e) {
+                // Hanya berlaku di tampilan mobile
                 if (window.innerWidth <= 992) {
-                    if (!menu.contains(e.target) && !hamburger.contains(e.target) && menu.classList.contains(
-                            'active')) {
-                        menu.classList.remove('active');
-                        body.style.overflow = '';
-                        const activeItems = menu.querySelectorAll('.menu-item-has-children.active');
-                        activeItems.forEach(item => item.classList.remove('active'));
-                    }
-                }
-            });
+                    e.preventDefault();
 
-            // Reset saat resize ke desktop
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 992) {
-                    if (menu.classList.contains('active')) {
-                        menu.classList.remove('active');
-                        body.style.overflow = '';
-                    }
+                    // Tutup dropdown lain yang terbuka
+                    dropdownParents.forEach(function(other) {
+                        if (other !== parent && other.classList.contains('active')) {
+                            other.classList.remove('active');
+                        }
+                    });
+
+                    // Toggle dropdown ini
+                    parent.classList.toggle('active');
+                }
+                // Di desktop, biarkan hover yang bekerja (tidak ada tindakan khusus)
+            });
+        });
+
+        // Tutup menu mobile saat klik di luar (opsional)
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth <= 992) {
+                if (!menu.contains(e.target) && !hamburger.contains(e.target) && menu.classList.contains(
+                        'active')) {
+                    menu.classList.remove('active');
+                    body.style.overflow = '';
                     const activeItems = menu.querySelectorAll('.menu-item-has-children.active');
                     activeItems.forEach(item => item.classList.remove('active'));
                 }
-            });
+            }
+        });
 
-            console.log('✅ MAN 2 Grobogan — Siap pakai WordPress!');
-            console.log('📱 Mobile accordion submenu aktif | 💻 Desktop hover dropdown aktif');
-            console.log('🎨 Tema: Ungu Tech #673DE6 + Aksen Teal #0DB5A4');
-        })();
-    </script>
+        // Reset saat resize ke desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 992) {
+                if (menu.classList.contains('active')) {
+                    menu.classList.remove('active');
+                    body.style.overflow = '';
+                }
+                const activeItems = menu.querySelectorAll('.menu-item-has-children.active');
+                activeItems.forEach(item => item.classList.remove('active'));
+            }
+        });
+
+        console.log('✅ MAN 2 Grobogan — Siap pakai WordPress!');
+        console.log('📱 Mobile accordion submenu aktif | 💻 Desktop hover dropdown aktif');
+        console.log('🎨 Tema: Ungu Tech #673DE6 + Aksen Teal #0DB5A4');
+    })();
+</script>
 
 </body>
 </html>
