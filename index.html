@@ -15,16 +15,12 @@
 
     <style>
         :root {
-            /* Ungu tech (utama) */
             --primary: #673DE6;
             --primary-dark: #5028D6;
             --primary-light: #8B6BEE;
-
-            /* Aksen teal / toska */
             --accent: #0DB5A4;
             --accent-dark: #099A8B;
             --accent-light: #14C9B6;
-
             --white: #ffffff;
             --dark: #1A103D;
             --soft: #F4F1FE;
@@ -46,7 +42,6 @@
             overflow-x: hidden;
         }
 
-        /* ========== HEADER & NAVIGATION ========== */
         header {
             width: 100%;
             position: fixed;
@@ -90,8 +85,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
+            overflow: hidden; /* untuk gambar */
             transition: 0.3s;
+        }
+
+        .logo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 14px;
         }
 
         .logo h1 {
@@ -137,7 +139,6 @@
             color: white;
         }
 
-        /* PPDB CTA accent */
         .menu>li.ppdb-cta>a {
             background: var(--accent) !important;
             color: white !important;
@@ -153,7 +154,6 @@
             box-shadow: 0 8px 28px rgba(13, 181, 164, 0.5);
         }
 
-        /* Dropdown (PC) */
         .dropdown {
             position: absolute;
             top: 110%;
@@ -191,7 +191,6 @@
             padding-left: 28px;
         }
 
-        /* Tampilkan dropdown saat hover (PC) */
         @media (hover: hover) {
             .menu li.menu-item-has-children:hover>.dropdown {
                 opacity: 1;
@@ -200,7 +199,6 @@
             }
         }
 
-        /* ========== HAMBURGER ========== */
         .hamburger {
             display: none;
             font-size: 28px;
@@ -304,22 +302,20 @@
 
         .hero-card {
             width: 100%;
-            max-width: 500px;
+            max-width: 650px;  /* Diperbesar untuk PC */
             background: var(--glass);
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
             border: 1px solid var(--glass-border);
-            padding: 20px;
+            padding: 24px;      /* sedikit lebih lega */
             border-radius: 35px;
             box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
         }
 
-        /* Video wrapper untuk YouTube embed */
         .video-wrapper {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%;
-            /* 16:9 aspect ratio */
+            padding-bottom: 56.25%; /* 16:9 */
             border-radius: 20px;
             overflow: hidden;
         }
@@ -484,26 +480,21 @@
             font-size: 0.9rem;
         }
 
-        /* ========== RESPONSIVE (TABLET & HP) ========== */
+        /* ========== RESPONSIVE ========== */
         @media (max-width: 992px) {
             .hero-grid {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-
             .hero-text p {
                 margin: 0 auto 30px;
             }
-
             .hero-image {
                 justify-content: center;
             }
-
             .footer-grid {
                 grid-template-columns: 1fr;
             }
-
-            /* Mobile Menu */
             .menu {
                 position: fixed;
                 top: 85px;
@@ -518,21 +509,16 @@
                 align-items: stretch;
                 gap: 4px;
             }
-
             .menu.active {
                 left: 0;
             }
-
             .menu>li {
                 width: 100%;
             }
-
             .menu>li>a {
                 padding: 14px 18px;
                 font-size: 1rem;
             }
-
-            /* Dropdown mobile (accordion) */
             .dropdown {
                 position: static;
                 width: 100%;
@@ -545,28 +531,22 @@
                 border-radius: 16px;
                 box-shadow: none;
             }
-
             .dropdown a {
                 color: white;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.08);
                 padding: 12px 22px;
             }
-
             .dropdown a:hover {
                 background: rgba(255, 255, 255, 0.12);
                 color: white;
                 padding-left: 28px;
             }
-
             .menu li.menu-item-has-children.active>.dropdown {
                 display: block;
             }
-
             .hamburger {
                 display: block;
             }
-
-            /* PPDB button mobile */
             .menu>li.ppdb-cta>a {
                 text-align: center;
                 margin-top: 8px;
@@ -577,32 +557,26 @@
             .hero-text h2 {
                 font-size: 2.2rem;
             }
-
             .hero-card {
                 max-width: 100%;
                 padding: 15px;
                 border-radius: 28px;
             }
-
             .video-wrapper {
                 border-radius: 16px;
             }
-
             .video-wrapper iframe {
                 border-radius: 16px;
             }
-
             .section-title h3 {
                 font-size: 2rem;
             }
-
             .footer-box iframe {
                 height: 240px;
             }
         }
     </style>
 </head>
-
 <body>
 
     <!-- ==================== HEADER ==================== -->
@@ -610,10 +584,11 @@
         <div class="container">
             <nav class="navbar">
 
-                <!-- Logo -->
+                <!-- Logo MAN 2 Grobogan (ganti dengan logo asli) -->
                 <a href="#" class="logo" aria-label="MAN 2 Grobogan - Beranda">
                     <div class="logo-box">
-                        <i class="fa-solid fa-graduation-cap"></i>
+                        <!-- Ganti src dengan file logo asli MAN 2 Grobogan (format PNG/SVG disarankan) -->
+                        <img src="https://github.com/ulilaidi60/web/blob/main/logo.png" alt="Logo MAN 2 Grobogan">
                     </div>
                     <div>
                         <h1>MAN 2 GROBOGAN</h1>
@@ -621,12 +596,9 @@
                     </div>
                 </a>
 
-                <!-- Navigasi Utama (WordPress ready class) -->
+                <!-- Navigasi Utama (sama seperti sebelumnya) -->
                 <ul class="menu" id="menu">
-
                     <li class="menu-item current-menu-item"><a href="#">Beranda</a></li>
-
-                    <!-- Profil -->
                     <li class="menu-item menu-item-has-children">
                         <a href="#">Profil</a>
                         <ul class="dropdown sub-menu">
@@ -639,8 +611,6 @@
                             <li><a href="#">Identitas Madrasah</a></li>
                         </ul>
                     </li>
-
-                    <!-- Akademik -->
                     <li class="menu-item menu-item-has-children">
                         <a href="#">Akademik</a>
                         <ul class="dropdown sub-menu">
@@ -653,8 +623,6 @@
                             <li><a href="#">Unduhan Akademik</a></li>
                         </ul>
                     </li>
-
-                    <!-- Kesiswaan -->
                     <li class="menu-item menu-item-has-children">
                         <a href="#">Kesiswaan</a>
                         <ul class="dropdown sub-menu">
@@ -666,8 +634,6 @@
                             <li><a href="#">Alumni</a></li>
                         </ul>
                     </li>
-
-                    <!-- Kegiatan -->
                     <li class="menu-item menu-item-has-children">
                         <a href="#">Kegiatan</a>
                         <ul class="dropdown sub-menu">
@@ -680,8 +646,6 @@
                             <li><a href="#">Peringatan Hari Besar</a></li>
                         </ul>
                     </li>
-
-                    <!-- Publikasi -->
                     <li class="menu-item menu-item-has-children">
                         <a href="#">Publikasi</a>
                         <ul class="dropdown sub-menu">
@@ -694,8 +658,6 @@
                             <li><a href="#">Arsip</a></li>
                         </ul>
                     </li>
-
-                    <!-- PPDB (CTA accent) -->
                     <li class="menu-item menu-item-has-children ppdb-cta">
                         <a href="#">PPDB</a>
                         <ul class="dropdown sub-menu">
@@ -707,8 +669,6 @@
                             <li><a href="#">FAQ PPDB</a></li>
                         </ul>
                     </li>
-
-                    <!-- Kontak -->
                     <li class="menu-item menu-item-has-children">
                         <a href="#">Kontak</a>
                         <ul class="dropdown sub-menu">
@@ -721,11 +681,9 @@
                     </li>
                 </ul>
 
-                <!-- Hamburger -->
                 <button class="hamburger" id="hamburger" aria-label="Buka menu navigasi">
                     <i class="fa-solid fa-bars"></i>
                 </button>
-
             </nav>
         </div>
     </header>
@@ -743,180 +701,147 @@
                     </a>
                 </div>
                 <div class="hero-image">
-                    <!-- Badge "Prestasi Nasional" telah dihapus -->
+                    <!-- Kartu video yang lebih besar di PC -->
                     <div class="hero-card">
-                        <!-- Video YouTube menggantikan foto -->
                         <div class="video-wrapper">
                             <iframe src="https://www.youtube.com/embed/PGJiRtDlpRA?rel=0"
-                            title="Video MAN 2 Grobogan"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen>
-                        </iframe>
+                                title="Video MAN 2 Grobogan"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- ==================== BERITA ==================== -->
-<section class="section">
-    <div class="container">
-        <div class="section-title">
-            <h3>📰 Berita Terbaru</h3>
-            <p>Informasi kegiatan terbaru MAN 2 Grobogan</p>
-        </div>
-        <div class="grid">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop"
-                alt="Seminar Teknologi">
-                <div class="card-content">
-                    <h4>Seminar Teknologi</h4>
-                    <p>Peningkatan kualitas pembelajaran berbasis digital dan AI.</p>
-                </div>
+    <!-- ==================== BERITA ==================== -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h3>📰 Berita Terbaru</h3>
+                <p>Informasi kegiatan terbaru MAN 2 Grobogan</p>
             </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=1200&auto=format&fit=crop"
-                alt="Prestasi Siswa">
-                <div class="card-content">
-                    <h4>Prestasi Siswa</h4>
-                    <p>Siswa MAN 2 Grobogan meraih penghargaan tingkat nasional.</p>
+            <div class="grid">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop" alt="Seminar Teknologi">
+                    <div class="card-content">
+                        <h4>Seminar Teknologi</h4>
+                        <p>Peningkatan kualitas pembelajaran berbasis digital dan AI.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
-                alt="Kegiatan Madrasah">
-                <div class="card-content">
-                    <h4>Kegiatan Madrasah</h4>
-                    <p>Kegiatan islami, akademik, dan pengembangan karakter siswa.</p>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=1200&auto=format&fit=crop" alt="Prestasi Siswa">
+                    <div class="card-content">
+                        <h4>Prestasi Siswa</h4>
+                        <p>Siswa MAN 2 Grobogan meraih penghargaan tingkat nasional.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" alt="Kegiatan Madrasah">
+                    <div class="card-content">
+                        <h4>Kegiatan Madrasah</h4>
+                        <p>Kegiatan islami, akademik, dan pengembangan karakter siswa.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- ==================== FOOTER ==================== -->
-<footer>
-    <div class="container">
-        <div class="footer-grid">
-            <!-- Peta Lokasi -->
-            <div class="footer-box">
-                <h4>📍 Peta Lokasi</h4>
-                <iframe src="https://maps.google.com/maps?q=MAN%202%20Grobogan&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                title="Peta MAN 2 Grobogan" loading="lazy" allowfullscreen></iframe>
-            </div>
-
-            <!-- Kontak & Media Sosial -->
-            <div class="footer-box">
-                <h4>📬 Kontak Resmi</h4>
-                <div class="contact-item">
-                    <i class="fa-solid fa-envelope"></i>
-                    <a href="mailto:mangubug@gmail.com">mangubug@gmail.com</a>
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-box">
+                    <h4>📍 Peta Lokasi</h4>
+                    <iframe src="https://maps.google.com/maps?q=MAN%202%20Grobogan&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        title="Peta MAN 2 Grobogan" loading="lazy" allowfullscreen></iframe>
                 </div>
-                <div class="contact-item">
-                    <i class="fa-brands fa-instagram"></i>
-                    <a href="https://www.instagram.com/man2grobogan?igsh=enp0bG5xM3Z4a25h" target="_blank"
-                    rel="noopener noreferrer">Instagram MAN 2 Grobogan</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fa-brands fa-youtube"></i>
-                    <a href="https://www.youtube.com/@man2grobogan" target="_blank"
-                    rel="noopener noreferrer">YouTube MAN 2 Grobogan</a>
-                </div>
-
-                <div class="social">
-                    <a href="mailto:mangubug@gmail.com" aria-label="Email resmi"><i
-                    class="fa-solid fa-envelope"></i></a>
-                    <a href="https://www.instagram.com/man2grobogan?igsh=enp0bG5xM3Z4a25h" target="_blank"
-                    rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/@man2grobogan" target="_blank" rel="noopener noreferrer"
-                    aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <div class="footer-box">
+                    <h4>📬 Kontak Resmi</h4>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:mangubug@gmail.com">mangubug@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.instagram.com/man2grobogan?igsh=enp0bG5xM3Z4a25h" target="_blank"
+                            rel="noopener noreferrer">Instagram MAN 2 Grobogan</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-brands fa-youtube"></i>
+                        <a href="https://www.youtube.com/@man2grobogan" target="_blank"
+                            rel="noopener noreferrer">YouTube MAN 2 Grobogan</a>
+                    </div>
+                    <div class="social">
+                        <a href="mailto:mangubug@gmail.com" aria-label="Email resmi"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://www.instagram.com/man2grobogan?igsh=enp0bG5xM3Z4a25h" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@man2grobogan" target="_blank" rel="noopener noreferrer"
+                            aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
                 </div>
             </div>
+            <div class="copyright">
+                © 2026 MAN 2 GROBOGAN — Modern Tech School Website
+            </div>
         </div>
+    </footer>
 
-        <div class="copyright">
-            © 2026 MAN 2 GROBOGAN — Modern Tech School Website
-        </div>
-    </div>
-</footer>
+    <script>
+        (function() {
+            const hamburger = document.getElementById('hamburger');
+            const menu = document.getElementById('menu');
+            const body = document.body;
 
-<!-- ==================== JAVASCRIPT ==================== -->
-<script>
-    (function() {
-        const hamburger = document.getElementById('hamburger');
-        const menu = document.getElementById('menu');
-        const body = document.body;
-
-        // Toggle mobile menu
-        hamburger.addEventListener('click', function() {
-            menu.classList.toggle('active');
-            if (menu.classList.contains('active')) {
-                body.style.overflow = 'hidden';
-            } else {
-                body.style.overflow = '';
-                // Tutup semua submenu mobile saat menu utama ditutup
-                const activeItems = menu.querySelectorAll('.menu-item-has-children.active');
-                activeItems.forEach(item => item.classList.remove('active'));
-            }
-        });
-
-        // Mobile dropdown accordion
-        const dropdownParents = document.querySelectorAll('.menu-item-has-children');
-
-        dropdownParents.forEach(function(parent) {
-            const link = parent.querySelector(':scope > a');
-            if (!link) return;
-
-            link.addEventListener('click', function(e) {
-                // Hanya berlaku di tampilan mobile
-                if (window.innerWidth <= 992) {
-                    e.preventDefault();
-
-                    // Tutup dropdown lain yang terbuka
-                    dropdownParents.forEach(function(other) {
-                        if (other !== parent && other.classList.contains('active')) {
-                            other.classList.remove('active');
-                        }
-                    });
-
-                    // Toggle dropdown ini
-                    parent.classList.toggle('active');
+            hamburger.addEventListener('click', function() {
+                menu.classList.toggle('active');
+                body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+                if (!menu.classList.contains('active')) {
+                    menu.querySelectorAll('.menu-item-has-children.active').forEach(item => item.classList.remove('active'));
                 }
-                // Di desktop, biarkan hover yang bekerja (tidak ada tindakan khusus)
             });
-        });
 
-        // Tutup menu mobile saat klik di luar (opsional)
-        document.addEventListener('click', function(e) {
-            if (window.innerWidth <= 992) {
-                if (!menu.contains(e.target) && !hamburger.contains(e.target) && menu.classList.contains(
-                        'active')) {
-                    menu.classList.remove('active');
-                    body.style.overflow = '';
-                    const activeItems = menu.querySelectorAll('.menu-item-has-children.active');
-                    activeItems.forEach(item => item.classList.remove('active'));
+            const dropdownParents = document.querySelectorAll('.menu-item-has-children');
+            dropdownParents.forEach(parent => {
+                const link = parent.querySelector(':scope > a');
+                if (!link) return;
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 992) {
+                        e.preventDefault();
+                        dropdownParents.forEach(other => {
+                            if (other !== parent && other.classList.contains('active')) {
+                                other.classList.remove('active');
+                            }
+                        });
+                        parent.classList.toggle('active');
+                    }
+                });
+            });
+
+            document.addEventListener('click', function(e) {
+                if (window.innerWidth <= 992) {
+                    if (!menu.contains(e.target) && !hamburger.contains(e.target) && menu.classList.contains('active')) {
+                        menu.classList.remove('active');
+                        body.style.overflow = '';
+                        menu.querySelectorAll('.menu-item-has-children.active').forEach(item => item.classList.remove('active'));
+                    }
                 }
-            }
-        });
+            });
 
-        // Reset saat resize ke desktop
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 992) {
-                if (menu.classList.contains('active')) {
-                    menu.classList.remove('active');
-                    body.style.overflow = '';
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 992) {
+                    if (menu.classList.contains('active')) {
+                        menu.classList.remove('active');
+                        body.style.overflow = '';
+                    }
+                    menu.querySelectorAll('.menu-item-has-children.active').forEach(item => item.classList.remove('active'));
                 }
-                const activeItems = menu.querySelectorAll('.menu-item-has-children.active');
-                activeItems.forEach(item => item.classList.remove('active'));
-            }
-        });
+            });
 
-        console.log('✅ MAN 2 Grobogan — Siap pakai WordPress!');
-        console.log('📱 Mobile accordion submenu aktif | 💻 Desktop hover dropdown aktif');
-        console.log('🎨 Tema: Ungu Tech #673DE6 + Aksen Teal #0DB5A4');
-    })();
-</script>
-
+            console.log('✅ MAN 2 Grobogan — Siap pakai!');
+        })();
+    </script>
 </body>
 </html>
