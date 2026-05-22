@@ -85,7 +85,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden; /* untuk gambar */
+            overflow: hidden;
             transition: 0.3s;
         }
 
@@ -302,12 +302,12 @@
 
         .hero-card {
             width: 100%;
-            max-width: 650px;  /* Diperbesar untuk PC */
+            max-width: 650px;
             background: var(--glass);
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
             border: 1px solid var(--glass-border);
-            padding: 24px;      /* sedikit lebih lega */
+            padding: 24px;
             border-radius: 35px;
             box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
         }
@@ -315,7 +315,7 @@
         .video-wrapper {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 */
+            padding-bottom: 56.25%;
             border-radius: 20px;
             overflow: hidden;
         }
@@ -584,11 +584,11 @@
         <div class="container">
             <nav class="navbar">
 
-                <!-- Logo MAN 2 Grobogan (ganti dengan logo asli) -->
+                <!-- Logo MAN 2 Grobogan (menggunakan file dari GitHub) -->
                 <a href="#" class="logo" aria-label="MAN 2 Grobogan - Beranda">
                     <div class="logo-box">
-                        <!-- Ganti src dengan file logo asli MAN 2 Grobogan (format PNG/SVG disarankan) -->
-                        <img src="https://github.com/ulilaidi60/web/blob/main/logo.png" alt="Logo MAN 2 Grobogan">
+                        <!-- Ganti dengan URL raw logo dari GitHub -->
+                        <img src="https://raw.githubusercontent.com/ulilaidi60/web/main/logo.png" alt="Logo MAN 2 Grobogan">
                     </div>
                     <div>
                         <h1>MAN 2 GROBOGAN</h1>
@@ -596,7 +596,7 @@
                     </div>
                 </a>
 
-                <!-- Navigasi Utama (sama seperti sebelumnya) -->
+                <!-- Navigasi Utama -->
                 <ul class="menu" id="menu">
                     <li class="menu-item current-menu-item"><a href="#">Beranda</a></li>
                     <li class="menu-item menu-item-has-children">
@@ -701,7 +701,6 @@
                     </a>
                 </div>
                 <div class="hero-image">
-                    <!-- Kartu video yang lebih besar di PC -->
                     <div class="hero-card">
                         <div class="video-wrapper">
                             <iframe src="https://www.youtube.com/embed/PGJiRtDlpRA?rel=0"
@@ -840,7 +839,7 @@
                 }
             });
 
-            console.log('✅ MAN 2 Grobogan — Siap pakai!');
+            console.log('✅ MAN 2 Grobogan — Logo & video siap!');
         })();
     </script>
 </body>
